@@ -14,7 +14,6 @@ $query = mysqli_query($konek,"SELECT * FROM tamu");
 <td>Nama</td>
 <td>Email</td>
 <td>Pesan</td>
-<td>Aksi</td>
 </tr>
 
 <?php
@@ -26,12 +25,6 @@ while($data=mysqli_fetch_array($query)){
 <td><?php echo $data['nama']; ?></td>
 <td><?php echo $data['email']; ?></td>
 <td><?php echo $data['pesan']; ?></td>
-<td>
-
-<a href="edit.php?id=<?php echo $data['no_tamu']; ?>">Edit</a>
-<a href="hapus.php?id=<?php echo $data['no_tamu']; ?>">Hapus</a>
-
-</td>
 </tr>
 
 <?php } ?>

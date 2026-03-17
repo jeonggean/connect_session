@@ -18,12 +18,11 @@ $query = mysqli_query($konek,"SELECT * FROM tamu");
 </tr>
 
 <?php
-$no=1;
+
 while($data=mysqli_fetch_array($query)){
 ?>
-
 <tr>
-<td><?php echo $no++; ?></td>
+<td><?php echo $data['no_tamu']; ?></td>
 <td><?php echo $data['nama']; ?></td>
 <td><?php echo $data['email']; ?></td>
 <td><?php echo $data['pesan']; ?></td>

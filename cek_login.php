@@ -20,7 +20,7 @@ header("location:session.php");
 
 }else{
 
-header("location:index.php");
+header("location:index.php?pesal=gagal");
 
 }
 

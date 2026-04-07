@@ -8,16 +8,14 @@ if(isset($_POST['submit'])){
     $password = $_POST['password'];
 
     // cek apakah username sudah ada
-    $cek = mysqli_query($koneksi,"SELECT * FROM user WHERE username='$username'");
+    $cek = mysqli_query($konek,"SELECT * FROM admin WHERE username ='$username'");
     
     if(mysqli_num_rows($cek) > 0){
         echo "Username sudah digunakan!";
     }else{
-        mysqli_query($koneksi,"INSERT INTO user(username,password) 
+        mysqli_query($konek,"INSERT INTO admin (username,password) 
         VALUES('$username','$password')");
-
-        echo "Registrasi berhasil! <br>";
-        echo "<a href='index.php'>Login sekarang</a>";
+        header("location:login.php");
     }
 
 }

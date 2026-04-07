@@ -1,6 +1,6 @@
 <h2>Register</h2>
 
-<form method="POST" action="proses_register.php">
+<form method="POST" action="prosesregister.php">
 
 Username <br>
 <input type="text" name="username"><br><br>
